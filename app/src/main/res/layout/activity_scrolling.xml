@@ -43,6 +43,6 @@
         android:layout_marginEnd="@dimen/fab_margin"
         app:layout_anchor="@id/app_bar"
         app:layout_anchorGravity="bottom|end"
-        app:srcCompat="@drawable/ic_gamepad" />
+        app:srcCompat="?attr/actionModeSelectAllDrawable" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

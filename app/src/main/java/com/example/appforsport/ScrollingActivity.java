@@ -1,5 +1,6 @@
 package com.example.appforsport;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
@@ -35,7 +36,9 @@ public class ScrollingActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Intent intent = new Intent(ScrollingActivity.this, GameActivity.class);
+                startActivity(intent);
+                Snackbar.make(view, "You leaved the game", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
