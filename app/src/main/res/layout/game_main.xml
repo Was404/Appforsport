@@ -9,47 +9,70 @@
 
     <ImageView
         android:id="@+id/imageView"
+        android:contentDescription="@string/app_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="center"
         app:srcCompat="@drawable/background" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/container1"
+    <LinearLayout
+        android:id="@+id/containBar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/btn_back"
-            android:layout_width="114dp"
-            android:layout_height="59dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            android:contentDescription="@string/btn_back"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/ic_menu_revert" />
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="114dp"
+                android:layout_height="59dp"
+                android:contentDescription="@string/btn_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/ic_menu_revert" />
 
-        <ImageButton
-            android:id="@+id/btn_left"
-            android:layout_width="158dp"
-            android:layout_height="63dp"
-            android:background="@drawable/btn_stroke"
-            android:contentDescription="@string/app_name"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="?attr/homeAsUpIndicator" />
+            <ImageButton
+                android:id="@+id/btn_left"
+                android:layout_width="158dp"
+                android:layout_height="63dp"
+                android:background="@drawable/btn_stroke"
+                android:contentDescription="@string/app_name"
+                android:onClick="LeftBonClick"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="?attr/homeAsUpIndicator"
+                tools:ignore="UsingOnClickInXml" />
 
-        <ImageButton
-            android:id="@+id/btn_right"
-            android:layout_width="158dp"
-            android:layout_height="63dp"
-            android:background="@drawable/btn_stroke"
-            android:contentDescription="@string/app_name"
-            android:rotation="180"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="?attr/homeAsUpIndicator" />
+            <ImageButton
+                android:id="@+id/btn_right"
+                android:layout_width="158dp"
+                android:layout_height="63dp"
+                android:background="@drawable/btn_stroke"
+                android:contentDescription="@string/app_name"
+                android:onClick="RightBonClick"
+                android:rotation="180"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="?attr/homeAsUpIndicator"
+                tools:ignore="UsingOnClickInXml" />
+
+            <ImageView
+                android:id="@+id/soccer"
+                android:contentDescription="@string/img_soccer"
+                android:layout_width="121dp"
+                android:layout_height="108dp"
+                android:layout_marginStart="145dp"
+                android:layout_marginBottom="100dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/soccer_player" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
 </RelativeLayout>
